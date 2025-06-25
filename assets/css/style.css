@@ -4204,3 +4204,12 @@ Preloader CSS
     display: block;
   }
 
+.responsive-heading {
+  font-size: 30px !important; 
+}
+
+@media (max-width: 768px) {
+  .responsive-heading {
+    font-size: 20px !important;
+  }
+}
