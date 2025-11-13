@@ -321,6 +321,49 @@ Navbar Area Style
 .desktop-nav .navbar .navbar-nav .nav-item:last-child a {
   margin-right: 0;
 }
+.desktop-nav .navbar .navbar-nav .nav-item.language-switcher-nav {
+  position: relative;
+  display: inline-block;
+}
+.desktop-nav .navbar .navbar-nav .nav-item.language-switcher-nav .lang-switcher-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.navbar-area .desktop-nav .navbar .navbar-nav .nav-item.language-switcher-nav {
+  position: relative;
+  display: inline-block;
+  float: none;
+}
+.navbar-area {
+  position: relative;
+  overflow: visible;
+}
+.navbar-area .desktop-nav {
+  position: relative;
+}
+.navbar-area .desktop-nav .navbar {
+  position: relative;
+}
+.navbar-area .desktop-nav .navbar .navbar-collapse {
+  position: relative;
+}
+.navbar-area .desktop-nav .navbar .navbar-nav {
+  position: relative;
+}
+.navbar-area .language-switcher-nav {
+  position: relative !important;
+  display: inline-block !important;
+  float: none !important;
+  clear: none !important;
+  margin: 0 !important;
+}
+.navbar-area .desktop-nav .navbar .navbar-nav .nav-item.language-switcher-nav {
+  position: relative !important;
+  display: inline-block !important;
+  float: none !important;
+  clear: none !important;
+}
 .desktop-nav .navbar .navbar-nav .nav-item:first-child a {
   margin-left: 0;
 }
