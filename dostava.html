@@ -17,8 +17,37 @@
         <link href="assets/css/odometer.min.css" rel="stylesheet">
         <link href="assets/css/style.css" rel="stylesheet">
         <link href="assets/css/responsive.css" rel="stylesheet">
+        <style>
+            .delivery-note {
+                background-color: #f9faff;
+                border-left: 4px solid #009bff;
+                padding: 20px;
+                margin: 30px 0;
+            }
+            .delivery-note p {
+                margin-bottom: 10px;
+            }
+            .delivery-note p:last-child {
+                margin-bottom: 0;
+            }
+            .small-print {
+                font-size: 12px;
+                color: #757e99;
+                line-height: 1.6;
+                margin-top: 30px;
+            }
+            .delivery-images {
+                margin: 30px 0;
+            }
+            .delivery-images img {
+                width: 100%;
+                height: auto;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+        </style>
 
-        <title>Repromaterijal u zatvorenim prostorima - Nibon Pak</title>
+        <title>Dostava - Nibon Pak</title>
         <link rel="icon" type="image/png" href="assets/images/favicon.svg">
     </head>
 
@@ -81,7 +110,7 @@
                                     <a href="radimo-zajedno.html" class="nav-link">Radimo zajedno</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="dostava.html" class="nav-link">Dostava</a>
+                                    <a href="dostava.html" class="nav-link active">Dostava</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="blog.html" class="nav-link">Blog</a>
@@ -101,12 +130,12 @@
                                     </button>
                                     <ul class="lang-menu" role="menu">
                                         <li role="none">
-                                            <a href="repromaterijal.html" class="lang-option active" role="menuitem" aria-label="Hrvatski">
+                                            <a href="dostava.html" class="lang-option active" role="menuitem" aria-label="Hrvatski">
                                                 <span>HR</span>
                                             </a>
                                         </li>
                                         <li role="none">
-                                            <a href="en/repromaterijal.html" class="lang-option" role="menuitem" aria-label="English">
+                                            <a href="en/dostava.html" class="lang-option" role="menuitem" aria-label="English">
                                                 <span>EN</span>
                                             </a>
                                         </li>
@@ -126,9 +155,10 @@
         <div class="Page-banner-area bg-color-e9f6ff">
             <div class="container">
                 <div class="banner-content">
-                    <h1>Repromaterijal u zatvorenim prostorima</h1>
+                    <h1>Brza i pouzdana isporuka – bez čekanja</h1>
                     <ul>
                         <li><a href="index.html">Vrati se na početnu</a></li>
+                        <li>Dostava</li>
                     </ul>
                     <!-- shape images -->
                     <img class="page-banner-shape-1" src="assets/images/shape/page-banner-shape-1.png" alt="image">
@@ -138,73 +168,96 @@
         </div>
         <!-- End Page Banner Area -->
 
-        
+        <!-- Start Terms & Conditions Area -->
+        <div class="terms-conditions-area pt-100 pb-70">
+			<div class="container">
+				<div class="terms-conditions">
+					<div class="conditions-content">
+						<p>Za poslovanje s voćem i povrćem iznimno je važno zadržati svježinu plodova i osigurati uspješnu, pouzdanu logistiku.</p>
+						<p>Zato Nibon Pak uvijek isporučuje sve sa zaliha – bez čekanja.</p>
+						<p>Kao Vaš pouzdani partner, vodimo računa o Vašoj sezoni i potražnji, i – ne manje važno – ispunjavamo svoja obećanja!</p>
+					</div>
 
-        <!-- Start Team Area -->
-<div class="team-area pt-100 pb-70">
-  <div class="container">
-    <div class="section-heading">
-      <div class="row">
-        <div class="col-xl-7 col-lg-7 col-md-7">
-          <h2>Proizvodi: Repromaterijal</h2>
-        </div>
-        <div class="col-xl-5 col-lg-5 col-md-5"></div>
-      </div>
-    </div>
+					<div class="conditions-content">
+						<h2>Dostava koja radi za Vas</h2>
+						<p>Razumijemo važnost brze i sigurne dostave naših proizvoda do vaših vrata.</p>
+						<p>Za većinu artikala, dostavu organiziramo putem brzih dostavnih službi – pouzdano i učinkovito.</p>
+						<p>👉 Sve narudžbe zaprimljene do 12:00 sati najčešće su na isporuci već sljedećeg radnog dana.</p>
 
-    <div class="team-slider owl-carousel owl-theme">
-      <div class="team-card">
-        <div class="team-image">
-          <img class="team-1" src="assets/images/proizvodi/repromaterijal/spojnice-za-cijepljenje.svg" alt="Spojnice za cijepljenje">
-        </div>
-        <div class="team-card-info">
-          <h3 class="h3usluge">
-            <a href="spojnice-za-cijepljenje.html">Spojnice za cijepljenje</a>
-          </h3>
-          <a href="spojnice-za-cijepljenje.html" class="btn btn-sm btn-primary mt-2">Pročitaj više...</a>
-        </div>
-      </div>
+						<h3>Za ispravnu i pravovremenu isporuku, molimo da prilikom narudžbe navedete:</h3>
+						<ul>
+							<li>
+                                <i class='bx bx-check'></i>
+                                ime i prezime ili naziv OPG-a / obrta / tvrtke
+                            </li>
+							<li>
+                                <i class='bx bx-check'></i>
+                                adresu za dostavu
+                            </li>
+							<li>
+                                <i class='bx bx-check'></i>
+                                kontakt broj telefona
+                            </li>
+						</ul>
+					</div>
 
-      <div class="team-card">
-        <div class="team-image">
-          <img class="team-1" src="assets/images/proizvodi/repromaterijal/kontejneri-za-presadnice.svg" alt="Kontejneri za presadnice">
-        </div>
-        <div class="team-card-info">
-          <h3 class="h3usluge">
-            <a href="kontejneri-za-presadnice.html">Kontejneri za presadnice</a>
-          </h3>
-          <a href="kontejneri-za-presadnice.html" class="btn btn-sm btn-primary mt-2">Pročitaj više...</a>
-        </div>
-      </div>
+					<!-- Delivery Images Section -->
+					<div class="delivery-images">
+						<div class="row">
+							<div class="col-lg-6 col-md-6 col-sm-12">
+								<img src="assets/images/dostava/posudice_dostava.png" alt="Pakiranje – posudice, brza dostava" loading="lazy">
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-12">
+								<img src="assets/images/dostava/posudice_dostava_2.png" alt="Posudice za dostavu – pakiranje voća i povrća" loading="lazy">
+							</div>
+						</div>
+					</div>
 
-      <div class="team-card">
-        <div class="team-image">
-          <img class="team-1" src="assets/images/proizvodi/repromaterijal/rucne-sijacice.svg" alt="Ručne sijačice za povrće">
-        </div>
-        <div class="team-card-info">
-          <h3 class="h3usluge">
-            <a href="rucne-sijacice-za-povrce.html">Ručne sijačice za povrće</a>
-          </h3>
-          <a href="rucne-sijacice-za-povrce.html" class="btn btn-sm btn-primary mt-2">Pročitaj više...</a>
-        </div>
-      </div>
+					<div class="conditions-content">
+						<h2>Preuzimanje u našem skladištu</h2>
+						<p>Ako vam je praktičnije, robu možete osobno preuzeti u našem skladištu.</p>
+						<p>Na taj način štedite vrijeme i odmah dobivate ono što vam je potrebno.</p>
+					</div>
 
-      <div class="team-card">
-        <div class="team-image">
-          <img class="team-1" src="assets/images/proizvodi/repromaterijal/zamagljivaci.svg" alt="Zamagljivači i evaporatori">
-        </div>
-        <div class="team-card-info">
-          <h3 class="h3usluge">
-            <a href="zamagljivaci-i-evaporatori.html">Zamagljivači i evaporatori</a>
-          </h3>
-          <a href="zamagljivaci-i-evaporatori.html" class="btn btn-sm btn-primary mt-2">Pročitaj više...</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End Team Area -->
+					<div class="conditions-content">
+						<h2>Fleksibilnost u hitnim situacijama</h2>
+						<p>Znamo da se berba i otprema ne mogu uvijek planirati.</p>
+						<p>Ako vas iznenadi hitna isporuka, čak i preko vikenda, slobodno nas nazovite – pronaći ćemo najbrže moguće rješenje.</p>
+					</div>
 
+					<div class="delivery-note">
+						<p><strong>Napomena:</strong> Dostava se ne vrši subotom, nedjeljom i državnim praznicima.</p>
+						<p>Pošiljke preuzete petkom bit će dostavljene u ponedjeljak.</p>
+					</div>
+
+					<div class="small-print">
+						<p>Unatoč nastojanjima da sve narudžbe isporučimo u najkraćem mogućem roku, moguća su iznimna kašnjenja uzrokovana okolnostima na koje ne možemo utjecati — poput prekida u transportu, vremenskih neprilika, tehničkih poteškoća dostavnih službi ili drugih nepredviđenih događaja. Nibon Pak d.o.o. ne preuzima odgovornost za kašnjenja nastala uslijed takvih izvanrednih situacija, ali će uvijek poduzeti sve razumne mjere kako bi se isporuka realizirala što prije.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+        <!-- End Terms & Conditions Area -->
+
+        <!-- Start Book Now Area -->
+        <div class="call-now-area">
+            <div class="container">
+                <div class="call-now bg-color-025d91">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8 col-md-8">
+                            <div class="section-heading">
+                                <h2>Zatražite ponudu za opremu ili ambalažu već danas!</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <div class="book-btn">
+                                <a class="default-btn" href="kontakt.html">Kontaktirajte nas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Book Now Area -->
 
         
         <!-- Start Footer Area -->
@@ -214,7 +267,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="footer-widget">
                             <a class="d-inline-block" href="index.html">
-                                <img class="footer-logo" src="assets/images/NibonPakLogo2.png" alt="image">
+                                <img class="footer-logo" src="assets/images/NibonPakLogo2.png" alt="Nibon Pak Logo">
                             </a>
                             <p>Ambalaža, oprema i rješenja za pakiranje voća i povrća – sve na jednom mjestu.</p>
 
@@ -343,3 +396,4 @@
         <script src="assets/js/torado-main.js"></script>
     </body>
 </html>
+

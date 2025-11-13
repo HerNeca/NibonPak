@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Link Of CSS -->
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../assets/css/owl.carousel.min.css" rel="stylesheet">
+        <link href="../assets/css/owl.theme.default.min.css" rel="stylesheet">
+        <link href="../assets/css/magnific-popup.css" rel="stylesheet">
+        <link href="../assets/css/scrollcue.css" rel="stylesheet">
+        <link href="../assets/css/odometer.min.css" rel="stylesheet">
+        <link href="../assets/css/flaticon_torado.css" rel="stylesheet">
+        <link href="../assets/css/boxicons.min.css" rel="stylesheet">
+        <link href="../assets/css/meanmenu.min.css" rel="stylesheet">
+        <link href="../assets/css/odometer.min.css" rel="stylesheet">
+        <link href="../assets/css/style.css" rel="stylesheet">
+        <link href="../assets/css/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <style>
+            /* Language Switcher Styles */
+            .language-switcher-nav {
+                margin-left: 20px;
+            }
+            .language-switcher-nav .lang-switcher-wrapper {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            .language-switcher-nav .lang-link {
+                display: inline-flex;
+                align-items: center;
+                gap: 4px;
+                font-size: 18px;
+                color: #01113e;
+                font-weight: 500;
+                padding: 0 !important;
+                margin: 0 !important;
+                transition: all 0.3s ease;
+                text-decoration: none;
+            }
+            .language-switcher-nav .lang-link i.bx-world {
+                font-size: 18px;
+                line-height: 0;
+                position: relative;
+                top: 2px;
+            }
+            .language-switcher-nav .lang-link:hover,
+            .language-switcher-nav .lang-link.active {
+                color: #009bff;
+            }
+            .language-switcher-nav .lang-separator {
+                color: #e0e0e0;
+                font-size: 18px;
+                line-height: 1;
+                margin: 0 4px;
+            }
+            /* Mobile menu language switcher */
+            @media (max-width: 991px) {
+                .language-switcher-nav {
+                    margin-left: 0;
+                    padding-top: 15px !important;
+                    padding-bottom: 15px !important;
+                    border-top: 1px solid #efefef;
+                    margin-top: 10px;
+                }
+                .language-switcher-nav .lang-switcher-wrapper {
+                    padding: 0 16px;
+                    justify-content: flex-start;
+                    gap: 12px;
+                }
+                .language-switcher-nav .lang-link {
+                    font-size: 16px !important;
+                    color: #002B55 !important;
+                    font-weight: 400;
+                }
+                .language-switcher-nav .lang-link.active {
+                    color: #009bff !important;
+                    font-weight: 500;
+                }
+                .language-switcher-nav .lang-separator {
+                    color: #efefef;
+                    font-size: 16px;
+                }
+            }
+            /* Footer language switcher */
+            .footer-language-switcher {
+                padding: 20px 0;
+            }
+            .footer-lang-switcher-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+            }
+            .footer-lang-link {
+                display: inline-flex;
+                align-items: center;
+                gap: 4px;
+                font-size: 16px;
+                color: #757e99;
+                transition: all 0.3s ease;
+            }
+            .footer-lang-link i.bx-world {
+                font-size: 16px;
+            }
+            .footer-lang-link:hover,
+            .footer-lang-link.active {
+                color: #009bff;
+            }
+            .footer-lang-separator {
+                color: #e0e0e0;
+                font-size: 16px;
+            }
+        </style>
+
+        <title>Sorting Machines and Lines - Nibon Pak</title>
+        <link rel="icon" type="image/png" href="../assets/images/favicon.svg">
+    </head>
+
+    <body>
+        <!-- Preloader -->
+        <div id="preloader">
+            <div id="loader"></div>
+        </div>
+        <!-- Preloader -->
+        
+        <!-- Start Navbar Area -->
+        <div class="navbar-area">
+            <div class="mobile-responsive-nav">
+                <div class="container">
+                    <div class="mobile-responsive-menu">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="../assets/images/NibonPakLogo2.png" class="main-logo" alt="logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="desktop-nav">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="../assets/images/NibonPakLogo2.png" class="main-logo" alt="logo">
+                        </a>
+
+                        <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a href="index.html" class="nav-link">Home</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="o-nama.html" class="nav-link">About Us</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link dropdown-toggle">
+                                        Products
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="ambalaza-za-pakiranje-svjezeg-voca-i-povrca.html" class="nav-link">Packaging for Fresh Fruits and Vegetables</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="repromaterijal.html" class="nav-link">Reusable Materials for Indoor Use</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="strojevi-i-linije-za-sortiranje.html" class="nav-link">Sorting Machines and Lines</a>
+                                        </li>
+                                
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="radimo-zajedno.html" class="nav-link">Work Together</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="dostava.html" class="nav-link">Delivery</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="blog.html" class="nav-link">Blog</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="kontakt.html" class="nav-link">Contact</a>
+                                </li>
+                                <li class="nav-item language-switcher-nav">
+                                    <div class="lang-switcher-wrapper">
+                                        <a href="../strojevi-i-linije-za-sortiranje.html" class="nav-link lang-link" aria-label="Hrvatski">
+                                            <i class='bx bx-world'></i>
+                                            <span>HR</span>
+                                        </a>
+                                        <span class="lang-separator">|</span>
+                                        <a href="strojevi-i-linije-za-sortiranje.html" class="nav-link lang-link active" aria-label="English">
+                                            <span>EN</span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+           
+            
+        </div>
+        <!-- End Navbar Area -->
+
+        <!-- Start Page Banner Area -->
+        <div class="Page-banner-area bg-color-e9f6ff">
+            <div class="container">
+                <div class="banner-content">
+                    <h1>Sorting Machines and Lines</h1>
+                    <ul>
+                        <li><a href="index.html">Return to Home</a></li>
+                    </ul>
+                    <!-- shape images -->
+                    <img class="page-banner-shape-1" src="../assets/images/shape/page-banner-shape-1.png" alt="image">
+                    <img class="page-banner-shape-2" src="../assets/images/shape/page-banner-shape-2.png" alt="image">
+                </div>
+            </div>
+        </div>
+        <!-- End Page Banner Area -->
+
+        
+
+        
+        <!-- Start Schedule Area -->
+        <div class="schedule-area pt-100 pb-30" data-cues="fadeIn">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="schedule-content">
+                            <div class="section-heading">
+                                <h2>Machines for Packaging Fruits and Vegetables</h2>
+                                <p>Today, more than ever, the market needs smaller packaging of fruits and vegetables from grams in containers to one, three, five, and ten kilograms depending on the product type.</p>
+                                <p>Packaging should be adapted to each product to maximally preserve its quality and adapt to market requirements.</p>
+                                <p>The final financial effects of production largely depend on the way and type of packaging.</p>
+                                <p>It certainly pays more to offer the market calibrated fruit or vegetable products uniform in size and packaged in appropriate small packaging.</p>
+                                <p>It pays the least when some fruit species, such as apples and pears, are sold in crates of 10-15kg in which first, second, and third class are mixed together at some average price. With the smallest packaging, the best financial effects are achieved.</p>
+                     
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-cues="slideInUp" data-duration="1000">
+                        <div class="schedule-image">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="../assets/images/proizvodi/flowpack/vertikalni-flowpack.svg" alt="Vertical Flowpack">
+            </div>
+            <div class="swiper-slide">
+                <img src="../assets/images/proizvodi/flowpack/horizontalni -flowpack.svg" alt="Horizontal Flowpack">
+            </div>
+            
+            
+        </div>
+
+        <!-- Navigation buttons (optional) -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Pagination (dots below) -->
+        <div class="swiper-pagination"></div>
+
+
+        
+    </div>
+</div>
+
+
+
+                    </div>
+
+                </div>
+                        <br>
+                                <p>In the process of preparing packaging of fruits and vegetables in so-called small packaging, Flowpack machines are optimal solutions. Before any measure for packaging, we must start from the question WHAT DOES THE MARKET – CUSTOMER WANT?</p>
+                                <p>The market – customers in EU countries, and now increasingly with us, require that fresh fruit and vegetable products be in closed packaging protected from the possibility of contamination. If it's about berries and small fruits, they are mainly packaged in PP and PET containers with a lid or shell lid.</p>
+                                <p>However, when it comes to larger quantities, the container closure is done in a Flowpack machine, wrapped in perforated thin nylon film or net. The vertical Flowpack machine takes up relatively little space, has optimal capacity and acceptable price.</p>
+                                <p>Some EU countries that pay increased attention to ecology and health correctness of food have banned the use of low-pressure sprayers because their droplets are usually sizes above 300 microns and very easily drip from leaves</p>
+                                <p>The function of these packaging machines is to package certain types of fruits or vegetables in small packaging up to 1000g or a certain number of pieces in plastic film.</p>
+                                
+                        <h3>Packaging is done in two possible ways:</h3>
+                        <br>
+                        <p>Berries and small fruits: strawberries, raspberries, blackberries, blueberries, etc. placed in containers of 250, 500, and 1000g, and their wrapping in thin perforated film. Containers packaged this way do not need a lid, which otherwise increases packaging costs. </p>
+                        <p>Today, the dominant market requirement is that packaged fruits such as strawberries, raspberries, blueberries, etc. be closed with a lid or film without the possibility of any contamination.</p>
+                        <p>Therefore, lids are placed on containers or they are wrapped in film on the flowpack machine.
+Which solution to choose depends on several factors: the quantity that needs to be packaged, daily quantities of harvest and packaging, the place of packaging (field or warehouse), etc.</p>
+
+            </div>
+            
+            
+        </div>
+        <!-- End Schedule Area -->
+
+        <!-- Start Schedule Area -->
+        <div class="schedule-area pt-100 pb-30" data-cues="fadeIn">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="schedule-content">
+                            <div class="section-heading">
+                                <h2>UNIQUE XK</h2>
+                            </div>
+
+                            <p>Technical Characteristics:</p>
+                            <p>Dimensions: Length 750mm, width 1000mm, height 1700mm</p>
+                            <p>Minimum packaging dimension: 50x10x0mm</p>
+                            <p>Maximum packaging dimension: 0x300x180mm</p>
+                            <p>Drive power: 4kW</p>
+                            <p>Voltage: 200V</p>
+                            <p>Weight: 300kg</p>
+                            <p>Maximum film width: 550mm</p>
+                            <p>Capacity: 20-25 pieces per minute</p>
+                           
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-cues="slideInUp" data-duration="1000">
+                        <div class="schedule-image">
+                            <div class="earn-image">
+                                <img class="about-image-3" src="../assets/images/proizvodi/flowpack/unique.svg" alt="UNIQUE XK">
+                            </div>
+                            
+                        </div>
+
+                        
+                    </div>
+                    <br>
+                                <p>A great advantage of this vertical type flowpack machine compared to horizontal types of machines is that it has the ability to package in multiple ways or multiple types of products.</p>
+                                <p>- Closing containers in perforated film</p>
+                                <p>- Packaging various vegetables and other products in perforated film, e.g., cucumbers, radishes, carrots, parsley, and all other types</p>
+                                <p>The only requirement is to ensure that the height does not exceed 180mm.</p>
+                                <p>Information about technical characteristics and prices is available upon request to interested customers.</p>
+                                
+                </div>
+            </div>
+        </div>
+        <!-- End Schedule Area -->
+        <br>
+        
+
+        <!-- Start Terms & Conditions Area -->
+<div class="terms-conditions-area pt-100 pb-70">
+  <div class="container">
+    <div class="terms-conditions">
+      <div class="section-heading">
+        <h2>Rotating Table for Fruit Packaging Model TAC-160</h2>
+      </div>
+
+      <div class="row align-items-center">
+        <!-- Characteristics (left side on desktop) -->
+        <div class="col-lg-6">
+          <div class="conditions-content">
+            <ul>
+              <li><i class='bx bx-check'></i> Table diameter: 120cm (standard version)</li>
+              <li><i class='bx bx-check'></i> Table diameter 150cm (on order)</li>
+              <li><i class='bx bx-check'></i> Table is made of STAINLESS STEEL</li>
+              <li><i class='bx bx-check'></i> Table surface is covered with special sponge</li>
+              <li><i class='bx bx-check'></i> Drive by electric motor 0,18 kW, 400V</li>
+              <li><i class='bx bx-check'></i> Height: 71cm, weight: 50kg</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Image (right side on desktop, below on mobile) -->
+        <div class="col-lg-6 text-center mt-4 mt-lg-0">
+          <img src="../assets/images/proizvodi/flowpack/rotirajuci-sto.svg" alt="Rotating Table" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+
+      <br>
+       <div class="section-heading">
+        <h3>Rotating Table for Calibrating and Packaging Apples TAM-160</h3>
+      </div>
+      <div class="row align-items-center">
+        <!-- Characteristics (left side on desktop) -->
+        <div class="col-lg-6">
+          <div class="conditions-content">
+           
+            <ul>
+              <li><i class='bx bx-check'></i> Table diameter: 200cm</li>
+              <li><i class='bx bx-check'></i> Construction of STAINLESS STEEL</li>
+              <li><i class='bx bx-check'></i> Great efficiency in small space</li>
+
+            </ul>
+          </div>
+        </div>
+
+        <!-- Image (right side on desktop, below on mobile) -->
+        <div class="col-lg-6 text-center mt-4 mt-lg-0">
+          <img src="../assets/images/proizvodi/flowpack/sto-za-pakiranje-jabuka.svg" alt="Rotating Table" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+
+      <br>
+
+      <div class="section-heading">
+        <h3>Machine for Packaging Apples in Nylon Bags by Number of Pieces Model COM-300</h3>
+      </div>
+
+      <div class="row align-items-center">
+        <!-- Characteristics (left side on desktop) -->
+        <div class="col-lg-6">
+          <div class="conditions-content">
+            <ul>
+              <li><i class='bx bx-check'></i> Packaging apples by piece</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Image (right side on desktop, below on mobile) -->
+        <div class="col-lg-6 text-center mt-4 mt-lg-0">
+          <img src="../assets/images/proizvodi/flowpack/stol-za-pakiranje-po-broju-komada.svg" alt="Packaging Machine" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+
+      <br>
+
+      <br>
+
+      <div class="section-heading">
+        <h3>Machine for Packaging Fruits and Vegetables in Nets MEN-110</h3>
+      </div>
+
+      <div class="row align-items-center">
+        <!-- Characteristics (left side on desktop) -->
+        <div class="col-lg-6">
+          <div class="conditions-content">
+            <ul>
+              <li><i class='bx bx-check'></i> Vegetables (onions, potatoes, garlic) and fruits (apples)</li>
+              <li><i class='bx bx-check'></i> Binding: with wire clip 5 x 0,35mm</li>
+              <li><i class='bx bx-check'></i> Dimensions: length 0,75m x width 0,70m x height 1,40m</li>
+              <li><i class='bx bx-check'></i> Motor: 0,37 kW, 400V</li>
+              <li><i class='bx bx-check'></i> Weight: 80kg</li>
+              <li><i class='bx bx-check'></i> Option: printer and applicator for labels</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Image (right side on desktop, below on mobile) -->
+        <div class="col-lg-6 text-center mt-4 mt-lg-0">
+          <img src="../assets/images/proizvodi/flowpack/sto-za-pakiranje-u-mrezice.svg" alt="Packaging Machine" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+
+
+      <br>
+
+      <div class="section-heading">
+        <h3>Horizontal Line for Packaging Fruits and Vegetables in Nets MAK-110</h3>
+      </div>
+
+      <div class="row align-items-center">
+        <!-- Characteristics (left side on desktop) -->
+        <div class="col-lg-6">
+          <div class="conditions-content">
+            <ul>
+              <li><i class='bx bx-check'></i> Vegetables (onions, potatoes, garlic) and fruits (apples)</li>
+              <li><i class='bx bx-check'></i> Line for packaging in nets from 0,5-2kg</li>
+              <li><i class='bx bx-check'></i> Packages round and elongated vegetables (peppers, zucchini, etc.)</li>
+              <li><i class='bx bx-check'></i> Tube for net diameter 22cm</li>
+              <li><i class='bx bx-check'></i> Capacity: 25 packages per minute</li>
+              <li><i class='bx bx-check'></i> Binding with wire clip 5 x 0,35mm</li>
+              <li><i class='bx bx-check'></i> Power: 0,75 kW, 400V</li>
+              <li><i class='bx bx-check'></i> Dimensions: length 3,10m x width 0,95m x height 0,90m</li>
+              <li><i class='bx bx-check'></i> Weight: 270 kg</li>
+
+            </ul>
+          </div>
+        </div>
+
+        <!-- Image (right side on desktop, below on mobile) -->
+        <div class="col-lg-6 text-center mt-4 mt-lg-0">
+          <img src="../assets/images/proizvodi/flowpack/horizontalna-linija.svg" alt="Packaging Line" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+
+
+      <br>
+
+      <div class="section-heading">
+        <h3>Line for Automatic Packaging of Containers in Nets</h3>
+      </div>
+
+      <div class="row align-items-center">
+        <!-- Characteristics (left side on desktop) -->
+        <div class="col-lg-6">
+          <div class="conditions-content">
+            <ul>
+              <li><i class='bx bx-check'></i> Vegetables (onions, potatoes, garlic) and fruits (apples)</li>
+              <li><i class='bx bx-check'></i> For containers 500, 1000, 1500 and 2000g</li>
+              <li><i class='bx bx-check'></i> Capacity: about 50 pieces per minute</li>
+              <li><i class='bx bx-check'></i> Simultaneous placement of plastic handle 12 – 20mm width</li>
+              <li><i class='bx bx-check'></i> Toshiba printer for labels that connects to the operator's computer</li>
+              <li><i class='bx bx-check'></i> Binding with wire clip 5 x 0,35mm</li>
+              <li><i class='bx bx-check'></i> Dimensions: length 3,38m x width 0,93m x height 1,50m</li>
+              <li><i class='bx bx-check'></i> Weight: 250 kg</li>
+              <li><i class='bx bx-check'></i> Power: 0,75 kW, 400V</li>
+
+
+            </ul>
+          </div>
+        </div>
+
+        <!-- Image (right side on desktop, below on mobile) -->
+        <div class="col-lg-6 text-center mt-4 mt-lg-0">
+          <img src="../assets/images/proizvodi/flowpack/linija-za-automatsko-pakiranje.svg" alt="Packaging Line" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+
+
+      <br>
+
+      <div class="section-heading">
+        <h3>Machine for Winding Net on Tube ZUK-200</h3>
+      </div>
+
+      <div class="row align-items-center">
+        <!-- Characteristics (left side on desktop) -->
+        <div class="col-lg-6">
+          <div class="conditions-content">
+            <ul>
+              <li><i class='bx bx-check'></i> Vegetables (onions, potatoes, garlic) and fruits (apples)</li>
+              <li><i class='bx bx-check'></i> Machine for rewinding net from roll to tube to speed up and improve work efficiency</li>
+              <li><i class='bx bx-check'></i> Dimensions: length 1,20m x width 0,50m x height 2,80m</li>
+              <li><i class='bx bx-check'></i> Weight: 50 kg</li>
+
+            </ul>
+          </div>
+        </div>
+
+        <!-- Image (right side on desktop, below on mobile) -->
+        <div class="col-lg-6 text-center mt-4 mt-lg-0">
+          <img src="../assets/images/proizvodi/flowpack/stoj-za-namotavanje-mrezice.svg" alt="Net Winding Machine" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+
+      <br>
+
+      <div class="section-heading">
+        <h3>Automatic Scale NEK-120</h3>
+      </div>
+
+      <div class="row align-items-center">
+        <!-- Characteristics (left side on desktop) -->
+        <div class="col-lg-6">
+          <div class="conditions-content">
+            <p>Control scale. After filling, containers are placed on the control scale with measuring scale from 0,1 – 3kg (+/-4g).</p>
+            <p>Capacity is up to 55 containers per minute. All containers that are below minimum or above maximum set weight, the scale stops and removes them from the belt.</p>
+
+            <ul>
+              <li><i class='bx bx-check'></i> Vegetables (onions, potatoes, garlic) and fruits (apples)</li>
+              <li><i class='bx bx-check'></i> Machine for rewinding net from roll to tube to speed up and improve work efficiency</li>
+              <li><i class='bx bx-check'></i> Power: 0,5 kW, 400V</li>
+              <li><i class='bx bx-check'></i> Dimensions: length 1,53m x width 0,50m x height 0,87m</li>
+              <li><i class='bx bx-check'></i> Weight: 80 kg</li>
+
+
+            </ul>
+          </div>
+        </div>
+
+        <!-- Image (right side on desktop, below on mobile) -->
+        <div class="col-lg-6 text-center mt-4 mt-lg-0">
+          <img src="../assets/images/proizvodi/flowpack/automatska-vaga.svg" alt="Automatic Scale" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+
+      <br>
+
+      <div class="section-heading">
+        <h3>Complete Line for Packaging Fruits and Vegetables</h3>
+      </div>
+
+      <div class="row align-items-center">
+        <!-- Characteristics (left side on desktop) -->
+        <div class="col-lg-6">
+          <div class="conditions-content">
+            <p>Control scale. After filling, containers are placed on the control scale with measuring scale from 0,1 – 3kg (+/-4g).</p>
+            <p>Capacity is up to 55 containers per minute. All containers that are below minimum or above maximum set weight, the scale stops and removes them from the belt.</p>
+
+            <ul>
+              <li><i class='bx bx-check'></i> Vegetables (onions, potatoes, garlic) and fruits (apples)</li>
+              <li><i class='bx bx-check'></i> Machine for rewinding net from roll to tube to speed up and improve work efficiency</li>
+              <li><i class='bx bx-check'></i> Power: 0,5 kW, 400V</li>
+              <li><i class='bx bx-check'></i> Dimensions: length 1,53m x width 0,50m x height 0,87m</li>
+              <li><i class='bx bx-check'></i> Weight: 80 kg</li>
+
+
+            </ul>
+          </div>
+        </div>
+
+        <!-- Image (right side on desktop, below on mobile) -->
+        <div class="col-lg-6 text-center mt-4 mt-lg-0">
+          <img src="../assets/images/proizvodi/flowpack/kompletna-linija.svg" alt="Complete Line" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+
+      <br>
+
+      <div class="section-heading">
+        <h3>Cherry Packaging Line</h3>
+      </div>
+
+      <div class="row align-items-center">
+        <!-- Characteristics (left side on desktop) -->
+        <div class="col-lg-6">
+          <div class="conditions-content">
+            <p>The line has a capacity of 300kg/hour.</p>
+            <p>This line with necessary modifications or additions can also be for packaging in containers: peaches, plums, apricots, nectarines, and grapes.</p>
+            <p>The line packages cherries in containers:</p>
+            <ul>
+              <li><i class='bx bx-check'></i> 500g</li>
+              <li><i class='bx bx-check'></i> 1000g</li>
+
+            </ul>
+          </div>
+        </div>
+
+        <!-- Image (right side on desktop, below on mobile) -->
+        <div class="col-lg-6 text-center mt-4 mt-lg-0">
+          <img src="../assets/images/proizvodi/flowpack/linije-za-pakiranje-tresnje.svg" alt="Cherry Packaging Line" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+
+      <br>
+
+      <div class="section-heading">
+        <h3>Other Offerings</h3>
+      </div>
+
+      <div class="row align-items-center">
+        <!-- Characteristics (left side on desktop) -->
+        <div class="col-lg-6">
+          <div class="conditions-content">
+            <p>In addition to the shown machines and lines for packaging fruits and vegetables, our offer also includes the following lines:</p>
+
+            <ul>
+              <li><i class='bx bx-check'></i> LINE FOR PACKAGING PEPPERS</li>
+              <li><i class='bx bx-check'></i> LINE FOR PACKAGING RASPBERRIES, BLUEBERRIES AND OTHER BERRIES</li>
+
+
+
+            </ul>
+          </div>
+        </div>
+
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- End Terms & Conditions Area -->
+
+
+        
+
+        
+        <!-- Start Footer Area -->
+        <div class="footer-area pt-100 pb-70 bg-color-f9faff" data-cues="slideInUp" data-duration="900">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer-widget">
+                            <a class="d-inline-block" href="index.html">
+                                <img class="footer-logo" src="../assets/images/NibonPakLogo2.png" alt="Nibon Pak Logo">
+                            </a>
+                            <p>Packaging, equipment, and solutions for fruit and vegetable packaging – all in one place.</p>
+
+                            <ul>
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <i class='bx bxl-facebook'></i>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="https://www.google.com/" target="_blank">
+                                        <i class='bx bxl-instagram'></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="footer-we">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    <a href="o-nama.html">About Us</a>
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    <a href="radimo-zajedno.html">Work Together</a>
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    <a href="dostava.html">Delivery</a>
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    <a href="blog.html">Blog</a>
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    <a href="kontakt.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-we">
+                            <h4>Our Products</h4>
+                            <ul>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    <a href="ambalaza-za-pakiranje-svjezeg-voca-i-povrca.html">Packaging for Fresh Fruits and Vegetables</a>
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    <a href="repromaterijal.html">Reusable Materials for Indoor Use</a>
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    <a href="strojevi-i-linije-za-sortiranje.html">Sorting Machines and Lines</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-we address">
+                            <h4>Get in Touch</h4>
+                            <ul>
+                                <li>
+                                    <i class="flaticon-phone-call-1"></i>
+                                    <a href="tel:+38513014525">Phone: 01 / 301 45 25</a>
+                                    <br>
+                                    <a href="tel:+38598671481">Contact: 098 / 671 481</a>
+                                    <br>
+                                    <a href="tel:+385997099266">Contact: 099 / 70 99 266</a>                                   
+                                </li>
+                                <li>
+                                    <i class="flaticon-mail"></i>
+                                    <a href="mailto:info@nibon-pak.hr">info@nibon-pak.hr</a>
+                                </li>
+                                <li>
+                                    <i class="flaticon-placeholder-1"></i>
+                                    <p>10410 Mičevec, Majurčeva 25, Croatia</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="footer-language-switcher text-center">
+                            <div class="footer-lang-switcher-wrapper">
+                                <a href="../strojevi-i-linije-za-sortiranje.html" class="footer-lang-link" aria-label="Hrvatski">
+                                    <i class='bx bx-world'></i>
+                                    <span>HR</span>
+                                </a>
+                                <span class="footer-lang-separator">|</span>
+                                <a href="strojevi-i-linije-za-sortiranje.html" class="footer-lang-link active" aria-label="English">
+                                    <span>EN</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Area -->
+
+        <!-- Start copy Area -->
+        <div class="copy-area bg-color-f9faff">
+            <div class="container">
+                <div class="copy-warp">
+                    <p>Copyright <span>Nibon Pak </span>All Rights Reserved. <a href="https://envytheme.com/" target="_blank">Development & SEO Web Vortex</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- End copy Area -->
+
+        <!-- Go top -->
+        <div class="go-top">
+            <i class='bx bxs-up-arrow-alt'></i>
+        </div>
+        <!-- Go top -->
+
+        <!-- Link Of JS -->
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/owl.carousel.min.js"></script>
+        <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="../assets/js/scrollcue.js"></script>
+        <script src="../assets/js/meanmenu.min.js"></script>
+        <script src="../assets/js/appear.min.js"></script>
+        <script src="../assets/js/odometer.min.js"></script>
+        <script src="../assets/js/form-validator.min.js"></script>
+        <script src="../assets/js/contact-form-script.js"></script>
+        <script src="../assets/js/jquery.ajaxchimp.min.js"></script>
+        <script src="../assets/js/torado-main.js"></script>
+        <script>
+            // Language Switcher Functionality
+            (function() {
+                function initLanguageSwitcher() {
+                    const currentPath = window.location.pathname;
+                    const isEnPage = currentPath.includes('/en/');
+                    const currentFile = currentPath.split('/').pop() || 'index.html';
+                    
+                    // Update header language switcher links
+                    const headerLangLinks = document.querySelectorAll('.language-switcher-nav .lang-link');
+                    headerLangLinks.forEach(function(link) {
+                        const href = link.getAttribute('href');
+                        if (isEnPage) {
+                            // If on EN page, HR link should go to root version
+                            if (!href.includes('/en/')) {
+                                link.setAttribute('href', '../' + currentFile);
+                                link.classList.remove('active');
+                            } else {
+                                link.classList.add('active');
+                            }
+                        } else {
+                            // If on HR page, EN link should go to /en/ version
+                            if (href.includes('/en/')) {
+                                link.setAttribute('href', 'en/' + currentFile);
+                                link.classList.remove('active');
+                            } else {
+                                link.classList.add('active');
+                            }
+                        }
+                    });
+                    
+                    // Update footer language switcher links
+                    const footerLangLinks = document.querySelectorAll('.footer-lang-link');
+                    footerLangLinks.forEach(function(link) {
+                        const href = link.getAttribute('href');
+                        if (isEnPage) {
+                            // If on EN page, HR link should go to root version
+                            if (!href.includes('/en/')) {
+                                link.setAttribute('href', '../' + currentFile);
+                                link.classList.remove('active');
+                            } else {
+                                link.classList.add('active');
+                            }
+                        } else {
+                            // If on HR page, EN link should go to /en/ version
+                            if (href.includes('/en/')) {
+                                link.setAttribute('href', 'en/' + currentFile);
+                                link.classList.remove('active');
+                            } else {
+                                link.classList.add('active');
+                            }
+                        }
+                    });
+                }
+                
+                // Initialize on DOM ready
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', initLanguageSwitcher);
+                } else {
+                    initLanguageSwitcher();
+                }
+            })();
+        </script>
+    </body>
+</html>
+

@@ -186,7 +186,7 @@
             bottom: 60px;
         };
         &::before {
-            background: linear-gradient(90deg, #F0F6FA 10.13%, rgba(255, 255, 255, 0) 180.69%);
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 10.13%, rgba(0, 0, 0, 0) 180.69%);
         }
         .container-fluid {
             max-width: 540px;
@@ -1410,7 +1410,7 @@
         padding-top: 100px;
         padding-bottom: 100px;
         &::before {
-            background: linear-gradient(90deg, #F0F6FA 30.13%, rgba(255, 255, 255, 0) 156.69%);
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 30.13%, rgba(0, 0, 0, 0) 156.69%);
         }
         .container-fluid {
             max-width: 720px;
@@ -2325,7 +2325,7 @@
         padding-top: 80px;
         padding-bottom: 80px;
         &::before {
-            background: linear-gradient(90deg, #F0F6FA 35.13%, rgba(255, 255, 255, 0) 80.69%);
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 35.13%, rgba(0, 0, 0, 0) 80.69%);
         }
         .container-fluid {
             max-width: 960px;
@@ -3109,7 +3109,7 @@
             bottom: 100px;
         };
         &::before {
-            background: linear-gradient(90deg, #F0F6FA 35.13%, rgba(255, 255, 255, 0) 78.69%);
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 35.13%, rgba(0, 0, 0, 0) 78.69%);
         }
         .container-fluid {
             max-width: 1140px;
@@ -3734,7 +3734,7 @@
 
     .banner-area {
         &::before {
-            background: linear-gradient(90deg, #F0F6FA 28.13%, rgba(255, 255, 255, 0) 82.69%);
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 28.13%, rgba(0, 0, 0, 0) 82.69%);
         }
         .container-fluid {
             max-width: 1320px;

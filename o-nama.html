@@ -17,6 +17,101 @@
         <link href="assets/css/odometer.min.css" rel="stylesheet">
         <link href="assets/css/style.css" rel="stylesheet">
         <link href="assets/css/responsive.css" rel="stylesheet">
+        <style>
+            /* Language Switcher Styles */
+            .language-switcher {
+                margin-left: 20px;
+                position: relative;
+            }
+            .lang-dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            .lang-toggle {
+                background: transparent;
+                border: 1px solid #e0e0e0;
+                border-radius: 4px;
+                padding: 8px 12px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                color: #01113e;
+                font-size: 14px;
+                transition: all 0.3s ease;
+            }
+            .lang-toggle:hover {
+                border-color: #009bff;
+                color: #009bff;
+            }
+            .lang-toggle i.bx-world {
+                font-size: 16px;
+            }
+            .lang-toggle i.bx-chevron-down {
+                font-size: 12px;
+                transition: transform 0.3s ease;
+            }
+            .lang-dropdown.active .lang-toggle i.bx-chevron-down {
+                transform: rotate(180deg);
+            }
+            .lang-menu {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                margin-top: 5px;
+                background: #fff;
+                border: 1px solid #e0e0e0;
+                border-radius: 4px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                list-style: none;
+                padding: 5px 0;
+                margin: 5px 0 0 0;
+                min-width: 80px;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px);
+                transition: all 0.3s ease;
+                z-index: 1000;
+            }
+            .lang-dropdown.active .lang-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+            .lang-option {
+                display: block;
+                padding: 8px 16px;
+                color: #01113e;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+            .lang-option:hover {
+                background: #f9faff;
+                color: #009bff;
+            }
+            .lang-option.active {
+                background: #f9faff;
+                color: #009bff;
+                font-weight: 600;
+            }
+            .footer-language-switcher {
+                padding: 20px 0;
+            }
+            .lang-dropdown-footer .lang-menu {
+                right: auto;
+                left: 50%;
+                transform: translateX(-50%) translateY(-10px);
+            }
+            .lang-dropdown-footer.active .lang-menu {
+                transform: translateX(-50%) translateY(0);
+            }
+            @media (max-width: 991px) {
+                .language-switcher {
+                    margin-left: 0;
+                    margin-top: 15px;
+                }
+            }
+        </style>
 
         <title>O nama - Nibon Pak</title>
         <link rel="icon" type="image/png" href="assets/images/favicon.svg">
@@ -81,6 +176,9 @@
                                     <a href="radimo-zajedno.html" class="nav-link">Radimo zajedno</a>
                                 </li>
                                 <li class="nav-item">
+                                    <a href="dostava.html" class="nav-link">Dostava</a>
+                                </li>
+                                <li class="nav-item">
                                     <a href="blog.html" class="nav-link">Blog</a>
                                 </li>
 
@@ -89,7 +187,27 @@
                                 </li>
                             </ul>
 
-                            
+                            <div class="language-switcher">
+                                <div class="lang-dropdown">
+                                    <button class="lang-toggle" type="button" aria-label="Change language" aria-expanded="false">
+                                        <i class='bx bx-world'></i>
+                                        <span>HR</span>
+                                        <i class='bx bx-chevron-down'></i>
+                                    </button>
+                                    <ul class="lang-menu" role="menu">
+                                        <li role="none">
+                                            <a href="o-nama.html" class="lang-option active" role="menuitem" aria-label="Hrvatski">
+                                                <span>HR</span>
+                                            </a>
+                                        </li>
+                                        <li role="none">
+                                            <a href="en/o-nama.html" class="lang-option" role="menuitem" aria-label="English">
+                                                <span>EN</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </nav>
                 </div>
@@ -303,6 +421,10 @@
                                 </li>
                                 <li>
                                     <i class='bx bx-chevron-right'></i>
+                                    <a href="dostava.html">Dostava</a>
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
                                     <a href="blog.html">Blog</a>
                                 </li>
                                 <li>
@@ -356,6 +478,31 @@
                         </div>
                     </div>
                 </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="footer-language-switcher text-center">
+                            <div class="lang-dropdown lang-dropdown-footer">
+                                <button class="lang-toggle" type="button" aria-label="Change language" aria-expanded="false">
+                                    <i class='bx bx-world'></i>
+                                    <span>HR</span>
+                                    <i class='bx bx-chevron-down'></i>
+                                </button>
+                                <ul class="lang-menu" role="menu">
+                                    <li role="none">
+                                        <a href="o-nama.html" class="lang-option active" role="menuitem" aria-label="Hrvatski">
+                                            <span>HR</span>
+                                        </a>
+                                    </li>
+                                    <li role="none">
+                                        <a href="en/o-nama.html" class="lang-option" role="menuitem" aria-label="English">
+                                            <span>EN</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- End Footer Area -->
@@ -389,5 +536,70 @@
         <script src="assets/js/contact-form-script.js"></script>
         <script src="assets/js/jquery.ajaxchimp.min.js"></script>
         <script src="assets/js/torado-main.js"></script>
+        <script>
+            // Language Switcher Functionality
+            (function() {
+                function initLanguageSwitcher() {
+                    const langDropdowns = document.querySelectorAll('.lang-dropdown');
+                    
+                    langDropdowns.forEach(function(dropdown) {
+                        const toggle = dropdown.querySelector('.lang-toggle');
+                        const menu = dropdown.querySelector('.lang-menu');
+                        const currentPath = window.location.pathname;
+                        const isEnPage = currentPath.includes('/en/');
+                        
+                        // Update links based on current page
+                        const langOptions = menu.querySelectorAll('.lang-option');
+                        langOptions.forEach(function(option) {
+                            const href = option.getAttribute('href');
+                            if (href) {
+                                if (isEnPage) {
+                                    // If on EN page, HR link should go to root version
+                                    const currentFile = currentPath.split('/').pop() || 'index.html';
+                                    if (!href.includes('/en/')) {
+                                        option.setAttribute('href', '../' + currentFile);
+                                    }
+                                } else {
+                                    // If on HR page, EN link should go to /en/ version
+                                    const currentFile = currentPath.split('/').pop() || 'index.html';
+                                    if (href.includes('/en/')) {
+                                        option.setAttribute('href', 'en/' + currentFile);
+                                    }
+                                }
+                            }
+                        });
+                        
+                        // Toggle dropdown
+                        if (toggle) {
+                            toggle.addEventListener('click', function(e) {
+                                e.stopPropagation();
+                                dropdown.classList.toggle('active');
+                            });
+                        }
+                        
+                        // Close on outside click
+                        document.addEventListener('click', function(e) {
+                            if (!dropdown.contains(e.target)) {
+                                dropdown.classList.remove('active');
+                            }
+                        });
+                        
+                        // Close on escape key
+                        document.addEventListener('keydown', function(e) {
+                            if (e.key === 'Escape') {
+                                dropdown.classList.remove('active');
+                            }
+                        });
+                    });
+                }
+                
+                // Initialize on DOM ready
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', initLanguageSwitcher);
+                } else {
+                    initLanguageSwitcher();
+                }
+            })();
+        </script>
     </body>
 </html>
