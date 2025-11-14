@@ -22,6 +22,80 @@
     z-index: 2;
     max-width: 185px;
   }
+  .mobile-responsive-nav .mobile-responsive-menu .mobile-language-switcher {
+    position: absolute;
+    top: 50%;
+    right: 55px;
+    transform: translateY(-50%);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    pointer-events: auto;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu .mobile-language-switcher .lang-dropdown {
+    pointer-events: auto;
+    touch-action: manipulation;
+    position: relative;
+    z-index: 10001;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu .mobile-language-switcher .lang-toggle {
+    padding: 5px 9px;
+    font-size: 12px;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    min-width: auto;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    pointer-events: auto;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0, 155, 255, 0.2);
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu .mobile-language-switcher .lang-toggle:hover {
+    border-color: #009bff;
+    color: #009bff;
+    box-shadow: 0 1px 3px rgba(0, 155, 255, 0.2);
+  }
+  .mobile-responsive-nav .mobile-responsive-menu .mobile-language-switcher .lang-toggle i.bx-world {
+    font-size: 13px;
+    line-height: 1;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu .mobile-language-switcher .lang-toggle span {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu .mobile-language-switcher .lang-toggle i.bx-chevron-down {
+    font-size: 9px;
+    line-height: 1;
+    margin-left: 2px;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu .mobile-language-switcher .lang-menu {
+    top: calc(100% + 5px);
+    right: 0;
+    min-width: 65px;
+    z-index: 10002;
+    pointer-events: auto;
+    touch-action: manipulation;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu .mobile-language-switcher .lang-option {
+    pointer-events: auto;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0, 155, 255, 0.2);
+    cursor: pointer;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu .mobile-language-switcher .lang-option {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
   .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav {
     margin-top: 68px;
     background-color: #ffffff;
@@ -57,26 +131,12 @@
     font-size: 14px;
     padding: 10px 16px !important;
   }
+  /* Hide language switcher in mobile menu - it should only appear in header */
   .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul li.language-switcher-nav {
-    border-top: 1px solid #efefef;
-    margin-top: 0;
-    padding: 0;
+    display: none !important;
   }
-  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul li.language-switcher-nav a {
-    padding: 12px 16px !important;
-    border-top: none !important;
-  }
-  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul li.language-switcher-nav .lang-switcher-wrapper {
-    padding: 0;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul li.language-switcher-nav a.nav-link {
-    display: inline-flex !important;
-    align-items: center;
-    padding: 0 !important;
-    margin: 0 !important;
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav .language-switcher {
+    display: none !important;
   }
   .navbar-area .language-switcher-nav {
     position: relative !important;
@@ -106,6 +166,28 @@
   .mobile-responsive-nav .mobile-responsive-menu.mean-container .navbar-nav::-webkit-scrollbar-thumb:hover {
     background-color: #555555;
   }
+  /* Ensure language switcher doesn't interfere with hamburger clicks but still works */
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mobile-language-switcher {
+    pointer-events: auto;
+    z-index: 10000;
+    touch-action: manipulation;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mobile-language-switcher .lang-dropdown {
+    pointer-events: auto;
+    touch-action: manipulation;
+    z-index: 10001;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mobile-language-switcher .lang-toggle {
+    pointer-events: auto;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0, 155, 255, 0.2);
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mobile-language-switcher .lang-menu {
+    z-index: 10002;
+    pointer-events: auto;
+    touch-action: manipulation;
+  }
   .mobile-responsive-nav .mobile-responsive-menu.mean-container a.meanmenu-reveal {
     top: 0;
     padding: 0;
@@ -125,8 +207,14 @@
   .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-bar {
     background: transparent;
     position: absolute;
-    z-index: 2;
+    z-index: 999;
     padding: 0;
+    right: 0;
+    top: 0;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container a.meanmenu-reveal {
+    z-index: 1000;
+    pointer-events: auto;
   }
   .mobile-responsive-nav .others-options {
     display: none !important;

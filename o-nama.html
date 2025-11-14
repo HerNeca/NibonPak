@@ -110,6 +110,62 @@
                     margin-left: 0;
                     margin-top: 15px;
                 }
+                /* Mobile header language switcher */
+                .mobile-language-switcher {
+                    position: absolute;
+                    top: 50%;
+                    right: 55px;
+                    transform: translateY(-50%);
+                    z-index: 3;
+                    display: flex;
+                    align-items: center;
+                }
+                .mobile-language-switcher .lang-toggle {
+                    padding: 5px 9px;
+                    font-size: 12px;
+                    border: 1px solid #e0e0e0;
+                    background: #fff;
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+                    border-radius: 4px;
+                    min-width: auto;
+                    height: 32px;
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                }
+                .mobile-language-switcher .lang-toggle:hover {
+                    border-color: #009bff;
+                    color: #009bff;
+                    box-shadow: 0 1px 3px rgba(0, 155, 255, 0.2);
+                }
+                .mobile-language-switcher .lang-toggle i.bx-world {
+                    font-size: 13px;
+                    line-height: 1;
+                }
+                .mobile-language-switcher .lang-toggle span {
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 1;
+                }
+                .mobile-language-switcher .lang-toggle i.bx-chevron-down {
+                    font-size: 9px;
+                    line-height: 1;
+                    margin-left: 2px;
+                }
+                .mobile-language-switcher .lang-menu {
+                    top: calc(100% + 5px);
+                    right: 0;
+                    min-width: 65px;
+                }
+                .mobile-language-switcher .lang-option {
+                    padding: 6px 12px;
+                    font-size: 12px;
+                }
+                /* Hide language switcher in mobile menu */
+                .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul li.language-switcher-nav,
+                .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav .language-switcher {
+                    display: none !important;
+                }
             }
         </style>
 
@@ -133,6 +189,27 @@
                             <a href="index.html">
                                 <img src="assets/images/NibonPakLogo2.png" class="main-logo" alt="logo">
                             </a>
+                        </div>
+                        <div class="mobile-language-switcher">
+                            <div class="lang-dropdown">
+                                <button class="lang-toggle" type="button" aria-label="Change language" aria-expanded="false">
+                                    <i class='bx bx-world'></i>
+                                    <span>HR</span>
+                                    <i class='bx bx-chevron-down'></i>
+                                </button>
+                                <ul class="lang-menu" role="menu">
+                                    <li role="none">
+                                        <a href="o-nama.html" class="lang-option active" role="menuitem" aria-label="Hrvatski">
+                                            <span>HR</span>
+                                        </a>
+                                    </li>
+                                    <li role="none">
+                                        <a href="en/o-nama.html" class="lang-option" role="menuitem" aria-label="English">
+                                            <span>EN</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -569,20 +646,25 @@
                             }
                         });
                         
-                        // Toggle dropdown
+                        // Toggle dropdown - support both click and touch events
                         if (toggle) {
-                            toggle.addEventListener('click', function(e) {
+                            function handleToggle(e) {
+                                e.preventDefault();
                                 e.stopPropagation();
                                 dropdown.classList.toggle('active');
-                            });
+                            }
+                            toggle.addEventListener('click', handleToggle);
+                            toggle.addEventListener('touchend', handleToggle);
                         }
                         
-                        // Close on outside click
-                        document.addEventListener('click', function(e) {
+                        // Close on outside click or touch
+                        function handleOutsideClose(e) {
                             if (!dropdown.contains(e.target)) {
                                 dropdown.classList.remove('active');
                             }
-                        });
+                        }
+                        document.addEventListener('click', handleOutsideClose);
+                        document.addEventListener('touchend', handleOutsideClose);
                         
                         // Close on escape key
                         document.addEventListener('keydown', function(e) {
@@ -593,11 +675,18 @@
                     });
                 }
                 
-                // Initialize on DOM ready
+                // Initialize on DOM ready and after meanmenu
+                function initializeAfterMeanmenu() {
+                    // Wait a bit for meanmenu to initialize
+                    setTimeout(function() {
+                        initLanguageSwitcher();
+                    }, 100);
+                }
+                
                 if (document.readyState === 'loading') {
-                    document.addEventListener('DOMContentLoaded', initLanguageSwitcher);
+                    document.addEventListener('DOMContentLoaded', initializeAfterMeanmenu);
                 } else {
-                    initLanguageSwitcher();
+                    initializeAfterMeanmenu();
                 }
             })();
         </script>

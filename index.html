@@ -45,68 +45,152 @@
                 }
             }
             /* Language Switcher Styles */
-            .language-switcher-nav {
+            .language-switcher {
                 margin-left: 20px;
+                position: relative;
             }
-            .language-switcher-nav .lang-switcher-wrapper {
+            .lang-dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            .lang-toggle {
+                background: transparent;
+                border: 1px solid #e0e0e0;
+                border-radius: 4px;
+                padding: 8px 12px;
+                cursor: pointer;
                 display: flex;
                 align-items: center;
-                gap: 8px;
-            }
-            .language-switcher-nav .lang-link {
-                display: inline-flex;
-                align-items: center;
-                gap: 4px;
-                font-size: 18px;
+                gap: 6px;
                 color: #01113e;
-                font-weight: 500;
-                padding: 0 !important;
-                margin: 0 !important;
+                font-size: 14px;
                 transition: all 0.3s ease;
-                text-decoration: none;
             }
-            .language-switcher-nav .lang-link i.bx-world {
-                font-size: 18px;
-                line-height: 0;
-                position: relative;
-                top: 2px;
-            }
-            .language-switcher-nav .lang-link:hover,
-            .language-switcher-nav .lang-link.active {
+            .lang-toggle:hover {
+                border-color: #009bff;
                 color: #009bff;
             }
-            .language-switcher-nav .lang-separator {
-                color: #e0e0e0;
-                font-size: 18px;
-                line-height: 1;
-                margin: 0 4px;
+            .lang-toggle i.bx-world {
+                font-size: 16px;
             }
-            /* Mobile menu language switcher */
+            .lang-toggle i.bx-chevron-down {
+                font-size: 12px;
+                transition: transform 0.3s ease;
+            }
+            .lang-dropdown.active .lang-toggle i.bx-chevron-down {
+                transform: rotate(180deg);
+            }
+            .lang-menu {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                margin-top: 5px;
+                background: #fff;
+                border: 1px solid #e0e0e0;
+                border-radius: 4px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                list-style: none;
+                padding: 5px 0;
+                margin: 5px 0 0 0;
+                min-width: 80px;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px);
+                transition: all 0.3s ease;
+                z-index: 1000;
+            }
+            .lang-dropdown.active .lang-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+            .lang-option {
+                display: block;
+                padding: 8px 16px;
+                color: #01113e;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+            .lang-option:hover {
+                background: #f9faff;
+                color: #009bff;
+            }
+            .lang-option.active {
+                background: #f9faff;
+                color: #009bff;
+                font-weight: 600;
+            }
+            .footer-language-switcher {
+                padding: 20px 0;
+            }
+            .lang-dropdown-footer .lang-menu {
+                right: auto;
+                left: 50%;
+                transform: translateX(-50%) translateY(-10px);
+            }
+            .lang-dropdown-footer.active .lang-menu {
+                transform: translateX(-50%) translateY(0);
+            }
             @media (max-width: 991px) {
-                .language-switcher-nav {
+                .language-switcher {
                     margin-left: 0;
-                    padding-top: 15px !important;
-                    padding-bottom: 15px !important;
-                    border-top: 1px solid #efefef;
-                    margin-top: 10px;
+                    margin-top: 15px;
                 }
-                .language-switcher-nav .lang-switcher-wrapper {
-                    padding: 0 16px;
-                    justify-content: flex-start;
-                    gap: 12px;
+                /* Mobile header language switcher */
+                .mobile-language-switcher {
+                    position: absolute;
+                    top: 50%;
+                    right: 55px;
+                    transform: translateY(-50%);
+                    z-index: 3;
+                    display: flex;
+                    align-items: center;
                 }
-                .language-switcher-nav .lang-link {
-                    font-size: 16px !important;
-                    color: #002B55 !important;
-                    font-weight: 400;
+                .mobile-language-switcher .lang-toggle {
+                    padding: 5px 9px;
+                    font-size: 12px;
+                    border: 1px solid #e0e0e0;
+                    background: #fff;
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+                    border-radius: 4px;
+                    min-width: auto;
+                    height: 32px;
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
                 }
-                .language-switcher-nav .lang-link.active {
-                    color: #009bff !important;
+                .mobile-language-switcher .lang-toggle:hover {
+                    border-color: #009bff;
+                    color: #009bff;
+                    box-shadow: 0 1px 3px rgba(0, 155, 255, 0.2);
+                }
+                .mobile-language-switcher .lang-toggle i.bx-world {
+                    font-size: 13px;
+                    line-height: 1;
+                }
+                .mobile-language-switcher .lang-toggle span {
+                    font-size: 12px;
                     font-weight: 500;
+                    line-height: 1;
                 }
-                .language-switcher-nav .lang-separator {
-                    color: #efefef;
-                    font-size: 16px;
+                .mobile-language-switcher .lang-toggle i.bx-chevron-down {
+                    font-size: 9px;
+                    line-height: 1;
+                    margin-left: 2px;
+                }
+                .mobile-language-switcher .lang-menu {
+                    top: calc(100% + 5px);
+                    right: 0;
+                    min-width: 65px;
+                }
+                .mobile-language-switcher .lang-option {
+                    padding: 6px 12px;
+                    font-size: 12px;
+                }
+                /* Hide language switcher in mobile menu */
+                .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul li.language-switcher-nav,
+                .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav .language-switcher {
+                    display: none !important;
                 }
             }
             /* Footer language switcher */
@@ -161,6 +245,27 @@
                                 <img src="assets/images/NibonPakLogo2.png" class="main-logo" alt="logo">
                             </a>
                         </div>
+                        <div class="mobile-language-switcher">
+                            <div class="lang-dropdown">
+                                <button class="lang-toggle" type="button" aria-label="Change language" aria-expanded="false">
+                                    <i class='bx bx-world'></i>
+                                    <span>HR</span>
+                                    <i class='bx bx-chevron-down'></i>
+                                </button>
+                                <ul class="lang-menu" role="menu">
+                                    <li role="none">
+                                        <a href="index.html" class="lang-option active" role="menuitem" aria-label="Hrvatski">
+                                            <span>HR</span>
+                                        </a>
+                                    </li>
+                                    <li role="none">
+                                        <a href="en/index.html" class="lang-option" role="menuitem" aria-label="English">
+                                            <span>EN</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -212,19 +317,29 @@
                                 <li class="nav-item">
                                     <a href="kontakt.html" class="nav-link">Kontakt</a>
                                 </li>
-                                <li class="nav-item language-switcher-nav">
-                                    <div class="lang-switcher-wrapper">
-                                        <a href="index.html" class="nav-link lang-link active" aria-label="Hrvatski">
-                                            <i class='bx bx-world'></i>
-                                            <span>HR</span>
-                                        </a>
-                                        <span class="lang-separator">|</span>
-                                        <a href="en/index.html" class="nav-link lang-link" aria-label="English">
-                                            <span>EN</span>
-                                        </a>
-                                    </div>
-                                </li>
                             </ul>
+
+                            <div class="language-switcher">
+                                <div class="lang-dropdown">
+                                    <button class="lang-toggle" type="button" aria-label="Change language" aria-expanded="false">
+                                        <i class='bx bx-world'></i>
+                                        <span>HR</span>
+                                        <i class='bx bx-chevron-down'></i>
+                                    </button>
+                                    <ul class="lang-menu" role="menu">
+                                        <li role="none">
+                                            <a href="index.html" class="lang-option active" role="menuitem" aria-label="Hrvatski">
+                                                <span>HR</span>
+                                            </a>
+                                        </li>
+                                        <li role="none">
+                                            <a href="en/index.html" class="lang-option" role="menuitem" aria-label="English">
+                                                <span>EN</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </nav>
                 </div>
@@ -604,62 +719,97 @@
             // Language Switcher Functionality
             (function() {
                 function initLanguageSwitcher() {
-                    const currentPath = window.location.pathname;
-                    const isEnPage = currentPath.includes('/en/');
-                    const currentFile = currentPath.split('/').pop() || 'index.html';
+                    const langDropdowns = document.querySelectorAll('.lang-dropdown');
                     
-                    // Update header language switcher links
-                    const headerLangLinks = document.querySelectorAll('.language-switcher-nav .lang-link');
-                    headerLangLinks.forEach(function(link) {
-                        const href = link.getAttribute('href');
-                        if (isEnPage) {
-                            // If on EN page, HR link should go to root version
-                            if (!href.includes('/en/')) {
-                                link.setAttribute('href', '../' + currentFile);
-                                link.classList.add('active');
-                            } else {
-                                link.classList.remove('active');
+                    langDropdowns.forEach(function(dropdown) {
+                        const toggle = dropdown.querySelector('.lang-toggle');
+                        const menu = dropdown.querySelector('.lang-menu');
+                        const currentPath = window.location.pathname;
+                        const isEnPage = currentPath.includes('/en/');
+                        
+                        // Update links based on current page
+                        const langOptions = menu.querySelectorAll('.lang-option');
+                        langOptions.forEach(function(option) {
+                            const href = option.getAttribute('href');
+                            if (href) {
+                                if (isEnPage) {
+                                    // If on EN page, HR link should go to root version
+                                    const currentFile = currentPath.split('/').pop() || 'index.html';
+                                    if (!href.includes('/en/')) {
+                                        option.setAttribute('href', '../' + currentFile);
+                                    }
+                                } else {
+                                    // If on HR page, EN link should go to /en/ version
+                                    const currentFile = currentPath.split('/').pop() || 'index.html';
+                                    if (href.includes('/en/')) {
+                                        option.setAttribute('href', 'en/' + currentFile);
+                                    }
+                                }
                             }
-                        } else {
-                            // If on HR page, EN link should go to /en/ version
-                            if (href.includes('/en/')) {
-                                link.setAttribute('href', 'en/' + currentFile);
-                                link.classList.remove('active');
-                            } else {
-                                link.classList.add('active');
+                        });
+                        
+                        // Update active state
+                        langOptions.forEach(function(option) {
+                            option.classList.remove('active');
+                            const href = option.getAttribute('href');
+                            if (href) {
+                                if (isEnPage && href.includes('/en/')) {
+                                    option.classList.add('active');
+                                } else if (!isEnPage && !href.includes('/en/')) {
+                                    option.classList.add('active');
+                                }
+                            }
+                        });
+                        
+                        // Update toggle text (both desktop and mobile)
+                        if (toggle) {
+                            const toggleSpan = toggle.querySelector('span');
+                            if (toggleSpan) {
+                                toggleSpan.textContent = isEnPage ? 'EN' : 'HR';
                             }
                         }
-                    });
-                    
-                    // Update footer language switcher links
-                    const footerLangLinks = document.querySelectorAll('.footer-lang-link');
-                    footerLangLinks.forEach(function(link) {
-                        const href = link.getAttribute('href');
-                        if (isEnPage) {
-                            // If on EN page, HR link should go to root version
-                            if (!href.includes('/en/')) {
-                                link.setAttribute('href', '../' + currentFile);
-                                link.classList.add('active');
-                            } else {
-                                link.classList.remove('active');
+                        
+                        // Toggle dropdown - support both click and touch events
+                        if (toggle) {
+                            function handleToggle(e) {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                dropdown.classList.toggle('active');
                             }
-                        } else {
-                            // If on HR page, EN link should go to /en/ version
-                            if (href.includes('/en/')) {
-                                link.setAttribute('href', 'en/' + currentFile);
-                                link.classList.remove('active');
-                            } else {
-                                link.classList.add('active');
+                            toggle.addEventListener('click', handleToggle);
+                            toggle.addEventListener('touchend', handleToggle);
+                        }
+                        
+                        // Close on outside click or touch
+                        function handleOutsideClose(e) {
+                            if (!dropdown.contains(e.target)) {
+                                dropdown.classList.remove('active');
                             }
                         }
+                        document.addEventListener('click', handleOutsideClose);
+                        document.addEventListener('touchend', handleOutsideClose);
+                        
+                        // Close on escape key
+                        document.addEventListener('keydown', function(e) {
+                            if (e.key === 'Escape') {
+                                dropdown.classList.remove('active');
+                            }
+                        });
                     });
                 }
                 
-                // Initialize on DOM ready
+                // Initialize on DOM ready and after meanmenu
+                function initializeAfterMeanmenu() {
+                    // Wait a bit for meanmenu to initialize
+                    setTimeout(function() {
+                        initLanguageSwitcher();
+                    }, 100);
+                }
+                
                 if (document.readyState === 'loading') {
-                    document.addEventListener('DOMContentLoaded', initLanguageSwitcher);
+                    document.addEventListener('DOMContentLoaded', initializeAfterMeanmenu);
                 } else {
-                    initLanguageSwitcher();
+                    initializeAfterMeanmenu();
                 }
             })();
         </script>
